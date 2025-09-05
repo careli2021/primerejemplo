@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Borderlands Fan Page</title>
+<style>
+  /* Reset y base */
+  * {
+    box-sizing: border-box;
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  body {
+    background: #1a1a1a;
+    color: #f0e68c;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  header {
+    background: #d14a00;
+    padding: 1rem 2rem;
+    text-align: center;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: 4px;
+    font-family: 'Impact', sans-serif;
+    text-transform: uppercase;
+    color: #fff1a8;
+    border-bottom: 5px solid #fff1a8;
+    animation: pulse 3s infinite alternate;
+  }
+  @keyframes pulse {
+    0% {text-shadow: 0 0 5px #fff1a8;}
+    100% {text-shadow: 0 0 20px #ff5f00;}
+  }
+
+  nav {
+    background: #331f0f;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 0;
+  }
+  nav a {
+    color: #f0e68c;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    position: relative;
+  }
+  nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    bottom: -5px;
+    left: 0;
+    background: #ff5f00;
+    transition: width 0.3s ease;
+  }
+  nav a:hover {
+    color: #ffb347;
+  }
+  nav a:hover::after {
+    width: 100%;
+  }
+
+  main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px #ff5f00;
+    border-bottom: 3px solid #ff5f00;
+    padding-bottom: 0.5rem;
+  }
+
+  /* Grid responsive para personajes */
+  .characters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 2rem;
+  }
+  .character-card {
+    background: #2e1a0d;
+    border: 3px solid #ff5f00;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ff5f00;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+  .character-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff9c42;
+  }
+  .character-card img {
+    width: 100%;
+    display: block;
+  }
+  .character-info {
+    padding: 1rem;
+    color: #fff1a8;
+  }
+  .character-name {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 2px #ff5f00;
+  }
+  .character-desc {
+    font-size: 1rem;
+    font-style: italic;
+  }
+
+  /* Footer */
+  footer {
+    background: #331f0f;
+    text-align: center;
+    padding: 1rem;
+    color: #f0e68c;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+
+  /* Animaciones adicionales */
+  .fade-in {
+    animation: fadeInUp 1.2s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  .fade-in.delay-1 { animation-delay: 0.3s; }
+  .fade-in.delay-2 { animation-delay: 0.6s; }
+  .fade-in.delay-3 { animation-delay: 0.9s; }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    header {
+      font-size: 1.5rem;
+      letter-spacing: 2px;
+    }
+    nav a {
+      margin: 0 0.8rem;
+      font-size: 0.9rem;
+    }
+    .section-title {
+      font-size: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    Borderlands Universe
+  </header>
+  <nav>
+    <a href="#characters">Personajes</a>
+    <a href="#weapons">Armas</a>
+    <a href="#map">Mapa</a>
+  </nav>
+  <main>
+    <section id="characters">
+      <h2 class="section-title fade-in delay-1">Personajes icónicos</h2>
+      <div class="characters">
+        <div class="character-card fade-in delay-2">
+          <img src="https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/fe/fe41ac634a89eeb0df848f123be6f2ff7b6fba29_full.jpg" alt="Lilith" />
+          <div class="character-info">
+            <h3 class="character-name">Lilith</h3>
+            <p class="character-desc">Siren con poderes de fuego y teletransportación.</p>
+          </div>
+        </div>
+        <div class="character-card fade-in delay-3">
+          <img src="https://static.wikia.nocookie.net/borderlands/images/5/5f/Mordecai.PNG" alt="Mordecai" />
+          <div class="character-info">
+            <h3 class="character-name">Mordecai</h3>
+            <p class="character-desc">Tirador experto y maestro con su halcón Bloodwing.</p>
+          </div>
+        </div>
+        <div class="character-card fade-in delay-2">
+          <img src="https://static.wikia.nocookie.net/borderlands/images/0/03/Brick.png" alt="Brick" />
+          <div class="character-info">
+            <h3 class="character-name">Brick</h3>
+            <p class="character-desc">Berserker con fuerza bruta y habilidades cuerpo a cuerpo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="weapons" style="margin-top:4rem;">
+      <h2 class="section-title fade-in delay-1">Armas legendarias</h2>
+      <div class="characters">
+        <div class="character-card fade-in delay-2">
+          <img src="https://static.wikia.nocookie.net/borderlands/images/3/3a/Infinity_Pistol.png" alt="Infinity Pistol" />
+          <div class="character-info">
+            <h3 class="character-name">Infinity Pistol</h3>
+            <p class="character-desc">Pistola legendaria con disparos infinitos sin recarga.</p>
+          </div>
+        </div>
+        <div class="character-card fade-in delay-3">
+          <img src="https://static.wikia.nocookie.net/borderlands/images/9/98/Conference_Call_Shotgun.png" alt="Conference Call" />
+          <div class="character-info">
+            <h3 class="character-name">Conference Call</h3>
+            <p class="character-desc">Escopeta que dispara múltiples proyectiles en abanico.</p>
+          </div>
+        </div>
+        <div class="character-card fade-in delay-2">
+          <img src="https://static.wikia.nocookie.net/borderlands/images/8/8e/Volcano_R.png" alt="Volcano" />
+          <div class="character-info">
+            <h3 class="character-name">Volcano</h3>
+            <p class="character-desc">Rifle que lanza proyectiles explosivos de fuego.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="map" style="margin-top:4rem;">
+      <h2 class="section-title fade-in delay-1">Mapa de Pandora</h2>
+      <img class="fade-in delay-2" src="https://static.wikia.nocookie.net/borderlands/images/7/7f/Pandora_map.png" alt="Mapa de Pandora" style="width:100%; max-width:900px; border: 5px solid #ff5f00; border-radius: 15px; box-shadow: 0 0 15px #ff5f00;" />
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Borderlands Fan Page - Diseño inspirado en el juego
+  </footer>
+</body>
+</html>
