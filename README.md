@@ -19,3 +19,6 @@ El objetivo de este repositorio es:
 1. Clonar el repositorio:
    ```bash
    git clone https://github.com/tuUsuario/primerEjemplo.git
+
+## Objetivo
+Practicar con los botones de GitHub desde la interfaz web 🚀.
